@@ -1,0 +1,490 @@
+2025-04-07 08:05:23.465 +01:00 [INF] Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long.
+2025-04-07 08:05:23.594 +01:00 [INF] Executed DbCommand (41ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsLock' AND "type" = 'table';
+2025-04-07 08:05:23.609 +01:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT OR IGNORE INTO "__EFMigrationsLock"("Id", "Timestamp") VALUES(1, '2025-04-07 07:05:23.6039321+00:00');
+SELECT changes();
+2025-04-07 08:05:23.701 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE IF NOT EXISTS "__EFMigrationsHistory" (
+    "MigrationId" TEXT NOT NULL CONSTRAINT "PK___EFMigrationsHistory" PRIMARY KEY,
+    "ProductVersion" TEXT NOT NULL
+);
+2025-04-07 08:05:23.709 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+2025-04-07 08:05:23.713 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2025-04-07 08:05:23.727 +01:00 [INF] No migrations were applied. The database is already up to date.
+2025-04-07 08:05:23.730 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DELETE FROM "__EFMigrationsLock";
+2025-04-07 08:05:24.128 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "todotasks" AS "t")
+2025-04-07 08:05:24.631 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44366/swagger/index.html - null null
+2025-04-07 08:05:24.859 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-07 08:05:24.860 +01:00 [INF] Hosting environment: Development
+2025-04-07 08:05:24.860 +01:00 [INF] Content root path: C:\Users\ramth\source\source\source\repos\SeamlessDigital.ToDoSystem
+2025-04-07 08:05:25.650 +01:00 [INF] HTTP GET /swagger/index.html responded 200 in 179.1664 ms
+2025-04-07 08:05:25.687 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44366/_framework/aspnetcore-browser-refresh.js - null null
+2025-04-07 08:05:25.695 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44366/swagger/index.html - 200 null text/html;charset=utf-8 1078.1857ms
+2025-04-07 08:05:25.697 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44366/_vs/browserLink - null null
+2025-04-07 08:05:25.702 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44366/_framework/aspnetcore-browser-refresh.js - 200 13804 application/javascript; charset=utf-8 14.0078ms
+2025-04-07 08:05:25.802 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44366/_vs/browserLink - 200 null text/javascript; charset=UTF-8 106.1222ms
+2025-04-07 08:05:25.837 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44366/swagger/v1/swagger.json - null null
+2025-04-07 08:05:25.859 +01:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 20.6905 ms
+2025-04-07 08:05:25.867 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44366/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 26.2317ms
+2025-04-07 08:06:22.436 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44366/api/ToDo/search - null null
+2025-04-07 08:06:22.482 +01:00 [INF] Executing endpoint 'SeamlessDigital.ToDoSystem.Controllers.ToDoController.SearchToDos (SeamlessDigital.ToDoSystem)'
+2025-04-07 08:06:22.543 +01:00 [INF] Route matched with {action = "SearchToDos", controller = "ToDo"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[SeamlessDigital.ToDoSystem.ViewModels.TaskItemViewModel]]] SearchToDos(System.String, System.Nullable`1[System.Int32], System.Nullable`1[System.DateTime]) on controller SeamlessDigital.ToDoSystem.Controllers.ToDoController (SeamlessDigital.ToDoSystem).
+2025-04-07 08:06:22.958 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "t"."Id", "t"."CategoryId", "t"."Completed", "t"."DueDate", "t"."Latitude", "t"."Longitude", "t"."Priority", "t"."Title", "t"."UserId", "c"."Id", "c"."ParentCategoryId", "c"."Title"
+FROM "todotasks" AS "t"
+LEFT JOIN "categories" AS "c" ON "t"."CategoryId" = "c"."Id"
+2025-04-07 08:06:23.593 +01:00 [INF] Successfully fetched To-Do items based on search criteria.
+2025-04-07 08:06:23.610 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+Concat2Iterator`1[[SeamlessDigital.ToDoSystem.ViewModels.TaskItemViewModel, SeamlessDigital.ToDoSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-04-07 08:06:23.675 +01:00 [INF] Executed action SeamlessDigital.ToDoSystem.Controllers.ToDoController.SearchToDos (SeamlessDigital.ToDoSystem) in 1121.9356ms
+2025-04-07 08:06:23.677 +01:00 [INF] Executed endpoint 'SeamlessDigital.ToDoSystem.Controllers.ToDoController.SearchToDos (SeamlessDigital.ToDoSystem)'
+2025-04-07 08:06:23.679 +01:00 [INF] HTTP GET /api/ToDo/search responded 200 in 1225.4947 ms
+2025-04-07 08:06:23.688 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44366/api/ToDo/search - 200 null application/json; charset=utf-8 1253.2276ms
+2025-04-07 08:07:02.720 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44366/api/ToDo/90 - null null
+2025-04-07 08:07:02.728 +01:00 [INF] Executing endpoint 'SeamlessDigital.ToDoSystem.Controllers.ToDoController.GetToDoById (SeamlessDigital.ToDoSystem)'
+2025-04-07 08:07:02.743 +01:00 [INF] Route matched with {action = "GetToDoById", controller = "ToDo"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[SeamlessDigital.ToDoSystem.ViewModels.TaskItemViewModel]] GetToDoById(Int32) on controller SeamlessDigital.ToDoSystem.Controllers.ToDoController (SeamlessDigital.ToDoSystem).
+2025-04-07 08:07:02.864 +01:00 [INF] Executed DbCommand (5ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "t"."Id", "t"."CategoryId", "t"."Completed", "t"."DueDate", "t"."Latitude", "t"."Longitude", "t"."Priority", "t"."Title", "t"."UserId", "c"."Id", "c"."ParentCategoryId", "c"."Title"
+FROM "todotasks" AS "t"
+LEFT JOIN "categories" AS "c" ON "t"."CategoryId" = "c"."Id"
+WHERE "t"."Id" = @__id_0
+LIMIT 1
+2025-04-07 08:07:02.865 +01:00 [WRN] To-Do item with ID 90 not found.
+2025-04-07 08:07:02.869 +01:00 [INF] Executing NotFoundObjectResult, writing value of type 'System.String'.
+2025-04-07 08:07:02.874 +01:00 [INF] Executed action SeamlessDigital.ToDoSystem.Controllers.ToDoController.GetToDoById (SeamlessDigital.ToDoSystem) in 130.6025ms
+2025-04-07 08:07:02.874 +01:00 [INF] Executed endpoint 'SeamlessDigital.ToDoSystem.Controllers.ToDoController.GetToDoById (SeamlessDigital.ToDoSystem)'
+2025-04-07 08:07:02.874 +01:00 [INF] HTTP GET /api/ToDo/90 responded 404 in 146.8104 ms
+2025-04-07 08:07:02.876 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44366/api/ToDo/90 - 404 null text/plain; charset=utf-8 156.8441ms
+2025-04-07 08:07:30.216 +01:00 [INF] Request starting HTTP/2 POST https://localhost:44366/api/ToDo - application/json 181
+2025-04-07 08:07:30.218 +01:00 [INF] Executing endpoint 'SeamlessDigital.ToDoSystem.Controllers.ToDoController.AddToDoItem (SeamlessDigital.ToDoSystem)'
+2025-04-07 08:07:30.241 +01:00 [INF] Route matched with {action = "AddToDoItem", controller = "ToDo"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[SeamlessDigital.ToDoSystem.ViewModels.CreateTaskViewModel]] AddToDoItem(SeamlessDigital.ToDoSystem.ViewModels.CreateTaskViewModel) on controller SeamlessDigital.ToDoSystem.Controllers.ToDoController (SeamlessDigital.ToDoSystem).
+2025-04-07 08:07:30.403 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[@__todoItem_CategoryId_Value_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "c"."Id", "c"."ParentCategoryId", "c"."Title", "c0"."Id", "c0"."ParentCategoryId", "c0"."Title"
+FROM "categories" AS "c"
+LEFT JOIN "categories" AS "c0" ON "c"."ParentCategoryId" = "c0"."Id"
+WHERE "c"."Id" = @__todoItem_CategoryId_Value_0
+LIMIT 1
+2025-04-07 08:07:30.675 +01:00 [ERR] ArgumentException occurred while adding new To-Do item.
+System.ArgumentNullException: Value cannot be null. (Parameter 'Invalid Category ID.')
+   at SeamlessDigital.ToDoSystem.Services.Implementations.TodoService.AddTaskAsync(CreateTaskViewModel todoItem) in C:\Users\ramth\source\source\source\repos\SeamlessDigital.ToDoSystem\Services\Implementations\TodoService.cs:line 88
+   at SeamlessDigital.ToDoSystem.Controllers.ToDoController.AddToDoItem(CreateTaskViewModel todoItem) in C:\Users\ramth\source\source\source\repos\SeamlessDigital.ToDoSystem\Controllers\TodoController.cs:line 122
+2025-04-07 08:07:30.749 +01:00 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2025-04-07 08:07:30.752 +01:00 [INF] Executed action SeamlessDigital.ToDoSystem.Controllers.ToDoController.AddToDoItem (SeamlessDigital.ToDoSystem) in 510.5678ms
+2025-04-07 08:07:30.752 +01:00 [INF] Executed endpoint 'SeamlessDigital.ToDoSystem.Controllers.ToDoController.AddToDoItem (SeamlessDigital.ToDoSystem)'
+2025-04-07 08:07:30.752 +01:00 [ERR] HTTP POST /api/ToDo responded 500 in 534.1842 ms
+2025-04-07 08:07:30.753 +01:00 [INF] Request finished HTTP/2 POST https://localhost:44366/api/ToDo - 500 null text/plain; charset=utf-8 537.4938ms
+2025-04-07 08:08:10.924 +01:00 [INF] Request starting HTTP/2 POST https://localhost:44366/api/ToDo - application/json 181
+2025-04-07 08:08:10.927 +01:00 [INF] Executing endpoint 'SeamlessDigital.ToDoSystem.Controllers.ToDoController.AddToDoItem (SeamlessDigital.ToDoSystem)'
+2025-04-07 08:08:10.929 +01:00 [INF] Route matched with {action = "AddToDoItem", controller = "ToDo"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[SeamlessDigital.ToDoSystem.ViewModels.CreateTaskViewModel]] AddToDoItem(SeamlessDigital.ToDoSystem.ViewModels.CreateTaskViewModel) on controller SeamlessDigital.ToDoSystem.Controllers.ToDoController (SeamlessDigital.ToDoSystem).
+2025-04-07 08:08:10.951 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@__todoItem_CategoryId_Value_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "c"."Id", "c"."ParentCategoryId", "c"."Title", "c0"."Id", "c0"."ParentCategoryId", "c0"."Title"
+FROM "categories" AS "c"
+LEFT JOIN "categories" AS "c0" ON "c"."ParentCategoryId" = "c0"."Id"
+WHERE "c"."Id" = @__todoItem_CategoryId_Value_0
+LIMIT 1
+2025-04-07 08:08:11.077 +01:00 [ERR] ArgumentException occurred while adding new To-Do item.
+System.ArgumentNullException: Value cannot be null. (Parameter 'Invalid Category ID.')
+   at SeamlessDigital.ToDoSystem.Services.Implementations.TodoService.AddTaskAsync(CreateTaskViewModel todoItem) in C:\Users\ramth\source\source\source\repos\SeamlessDigital.ToDoSystem\Services\Implementations\TodoService.cs:line 88
+   at SeamlessDigital.ToDoSystem.Controllers.ToDoController.AddToDoItem(CreateTaskViewModel todoItem) in C:\Users\ramth\source\source\source\repos\SeamlessDigital.ToDoSystem\Controllers\TodoController.cs:line 122
+2025-04-07 08:08:11.081 +01:00 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2025-04-07 08:08:11.084 +01:00 [INF] Executed action SeamlessDigital.ToDoSystem.Controllers.ToDoController.AddToDoItem (SeamlessDigital.ToDoSystem) in 155.0277ms
+2025-04-07 08:08:11.084 +01:00 [INF] Executed endpoint 'SeamlessDigital.ToDoSystem.Controllers.ToDoController.AddToDoItem (SeamlessDigital.ToDoSystem)'
+2025-04-07 08:08:11.084 +01:00 [ERR] HTTP POST /api/ToDo responded 500 in 157.4520 ms
+2025-04-07 08:08:11.085 +01:00 [INF] Request finished HTTP/2 POST https://localhost:44366/api/ToDo - 500 null text/plain; charset=utf-8 163.4684ms
+2025-04-07 08:08:41.556 +01:00 [INF] Request starting HTTP/2 POST https://localhost:44366/api/ToDo - application/json 181
+2025-04-07 08:08:41.558 +01:00 [INF] Executing endpoint 'SeamlessDigital.ToDoSystem.Controllers.ToDoController.AddToDoItem (SeamlessDigital.ToDoSystem)'
+2025-04-07 08:08:41.569 +01:00 [INF] Route matched with {action = "AddToDoItem", controller = "ToDo"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[SeamlessDigital.ToDoSystem.ViewModels.CreateTaskViewModel]] AddToDoItem(SeamlessDigital.ToDoSystem.ViewModels.CreateTaskViewModel) on controller SeamlessDigital.ToDoSystem.Controllers.ToDoController (SeamlessDigital.ToDoSystem).
+2025-04-07 08:08:41.575 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@__todoItem_CategoryId_Value_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "c"."Id", "c"."ParentCategoryId", "c"."Title", "c0"."Id", "c0"."ParentCategoryId", "c0"."Title"
+FROM "categories" AS "c"
+LEFT JOIN "categories" AS "c0" ON "c"."ParentCategoryId" = "c0"."Id"
+WHERE "c"."Id" = @__todoItem_CategoryId_Value_0
+LIMIT 1
+2025-04-07 08:08:41.735 +01:00 [ERR] ArgumentException occurred while adding new To-Do item.
+System.ArgumentNullException: Value cannot be null. (Parameter 'Invalid Category ID.')
+   at SeamlessDigital.ToDoSystem.Services.Implementations.TodoService.AddTaskAsync(CreateTaskViewModel todoItem) in C:\Users\ramth\source\source\source\repos\SeamlessDigital.ToDoSystem\Services\Implementations\TodoService.cs:line 88
+   at SeamlessDigital.ToDoSystem.Controllers.ToDoController.AddToDoItem(CreateTaskViewModel todoItem) in C:\Users\ramth\source\source\source\repos\SeamlessDigital.ToDoSystem\Controllers\TodoController.cs:line 122
+2025-04-07 08:08:41.777 +01:00 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2025-04-07 08:08:41.778 +01:00 [INF] Executed action SeamlessDigital.ToDoSystem.Controllers.ToDoController.AddToDoItem (SeamlessDigital.ToDoSystem) in 209.2121ms
+2025-04-07 08:08:41.778 +01:00 [INF] Executed endpoint 'SeamlessDigital.ToDoSystem.Controllers.ToDoController.AddToDoItem (SeamlessDigital.ToDoSystem)'
+2025-04-07 08:08:41.779 +01:00 [ERR] HTTP POST /api/ToDo responded 500 in 221.4555 ms
+2025-04-07 08:08:41.779 +01:00 [INF] Request finished HTTP/2 POST https://localhost:44366/api/ToDo - 500 null text/plain; charset=utf-8 224.4196ms
+2025-04-07 08:10:13.360 +01:00 [INF] Request starting HTTP/2 POST https://localhost:44366/api/ToDo - application/json 182
+2025-04-07 08:10:13.362 +01:00 [INF] Executing endpoint 'SeamlessDigital.ToDoSystem.Controllers.ToDoController.AddToDoItem (SeamlessDigital.ToDoSystem)'
+2025-04-07 08:10:13.362 +01:00 [INF] Route matched with {action = "AddToDoItem", controller = "ToDo"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[SeamlessDigital.ToDoSystem.ViewModels.CreateTaskViewModel]] AddToDoItem(SeamlessDigital.ToDoSystem.ViewModels.CreateTaskViewModel) on controller SeamlessDigital.ToDoSystem.Controllers.ToDoController (SeamlessDigital.ToDoSystem).
+2025-04-07 08:10:13.375 +01:00 [INF] Executed DbCommand (5ms) [Parameters=[@__todoItem_CategoryId_Value_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "c"."Id", "c"."ParentCategoryId", "c"."Title", "c0"."Id", "c0"."ParentCategoryId", "c0"."Title"
+FROM "categories" AS "c"
+LEFT JOIN "categories" AS "c0" ON "c"."ParentCategoryId" = "c0"."Id"
+WHERE "c"."Id" = @__todoItem_CategoryId_Value_0
+LIMIT 1
+2025-04-07 08:10:13.572 +01:00 [INF] Executed DbCommand (4ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Boolean), @p2='?' (DbType = DateTime), @p3='?' (DbType = Double), @p4='?' (DbType = Double), @p5='?' (DbType = Int32), @p6='?' (Size = 5), @p7='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "todotasks" ("CategoryId", "Completed", "DueDate", "Latitude", "Longitude", "Priority", "Title", "UserId")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7)
+RETURNING "Id";
+2025-04-07 08:10:13.614 +01:00 [INF] Successfully added new To-Do item with ID 32.
+2025-04-07 08:10:13.616 +01:00 [INF] Executing CreatedAtActionResult, writing value of type 'SeamlessDigital.ToDoSystem.ViewModels.CreateTaskViewModel'.
+2025-04-07 08:10:13.639 +01:00 [INF] Executed action SeamlessDigital.ToDoSystem.Controllers.ToDoController.AddToDoItem (SeamlessDigital.ToDoSystem) in 276.2321ms
+2025-04-07 08:10:13.639 +01:00 [INF] Executed endpoint 'SeamlessDigital.ToDoSystem.Controllers.ToDoController.AddToDoItem (SeamlessDigital.ToDoSystem)'
+2025-04-07 08:10:13.639 +01:00 [INF] HTTP POST /api/ToDo responded 201 in 277.2837 ms
+2025-04-07 08:10:13.639 +01:00 [INF] Request finished HTTP/2 POST https://localhost:44366/api/ToDo - 201 null application/json; charset=utf-8 279.9975ms
+2025-04-07 08:14:42.542 +01:00 [INF] Request starting HTTP/2 POST https://localhost:44366/api/ToDo - application/json 183
+2025-04-07 08:14:42.549 +01:00 [INF] Executing endpoint 'SeamlessDigital.ToDoSystem.Controllers.ToDoController.AddToDoItem (SeamlessDigital.ToDoSystem)'
+2025-04-07 08:14:42.555 +01:00 [INF] Route matched with {action = "AddToDoItem", controller = "ToDo"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[SeamlessDigital.ToDoSystem.ViewModels.CreateTaskViewModel]] AddToDoItem(SeamlessDigital.ToDoSystem.ViewModels.CreateTaskViewModel) on controller SeamlessDigital.ToDoSystem.Controllers.ToDoController (SeamlessDigital.ToDoSystem).
+2025-04-07 08:14:42.562 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@__todoItem_CategoryId_Value_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "c"."Id", "c"."ParentCategoryId", "c"."Title", "c0"."Id", "c0"."ParentCategoryId", "c0"."Title"
+FROM "categories" AS "c"
+LEFT JOIN "categories" AS "c0" ON "c"."ParentCategoryId" = "c0"."Id"
+WHERE "c"."Id" = @__todoItem_CategoryId_Value_0
+LIMIT 1
+2025-04-07 08:14:42.568 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Boolean), @p2='?' (DbType = DateTime), @p3='?' (DbType = Double), @p4='?' (DbType = Double), @p5='?' (DbType = Int32), @p6='?' (Size = 5), @p7='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "todotasks" ("CategoryId", "Completed", "DueDate", "Latitude", "Longitude", "Priority", "Title", "UserId")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7)
+RETURNING "Id";
+2025-04-07 08:14:42.573 +01:00 [INF] Successfully added new To-Do item with ID 33.
+2025-04-07 08:14:42.574 +01:00 [INF] Executing CreatedAtActionResult, writing value of type 'SeamlessDigital.ToDoSystem.ViewModels.CreateTaskViewModel'.
+2025-04-07 08:14:42.591 +01:00 [INF] Executed action SeamlessDigital.ToDoSystem.Controllers.ToDoController.AddToDoItem (SeamlessDigital.ToDoSystem) in 33.7043ms
+2025-04-07 08:14:42.591 +01:00 [INF] Executed endpoint 'SeamlessDigital.ToDoSystem.Controllers.ToDoController.AddToDoItem (SeamlessDigital.ToDoSystem)'
+2025-04-07 08:14:42.591 +01:00 [INF] HTTP POST /api/ToDo responded 201 in 42.5498 ms
+2025-04-07 08:14:42.592 +01:00 [INF] Request finished HTTP/2 POST https://localhost:44366/api/ToDo - 201 null application/json; charset=utf-8 50.7024ms
+2025-04-07 08:18:34.484 +01:00 [INF] Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long.
+2025-04-07 08:18:34.612 +01:00 [INF] Executed DbCommand (53ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsLock' AND "type" = 'table';
+2025-04-07 08:18:34.627 +01:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT OR IGNORE INTO "__EFMigrationsLock"("Id", "Timestamp") VALUES(1, '2025-04-07 07:18:34.6208971+00:00');
+SELECT changes();
+2025-04-07 08:18:34.701 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE IF NOT EXISTS "__EFMigrationsHistory" (
+    "MigrationId" TEXT NOT NULL CONSTRAINT "PK___EFMigrationsHistory" PRIMARY KEY,
+    "ProductVersion" TEXT NOT NULL
+);
+2025-04-07 08:18:34.709 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+2025-04-07 08:18:34.712 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2025-04-07 08:18:34.724 +01:00 [INF] No migrations were applied. The database is already up to date.
+2025-04-07 08:18:34.728 +01:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DELETE FROM "__EFMigrationsLock";
+2025-04-07 08:18:35.013 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "todotasks" AS "t")
+2025-04-07 08:18:35.352 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44366/swagger/index.html - null null
+2025-04-07 08:18:35.516 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-07 08:18:35.516 +01:00 [INF] Hosting environment: Development
+2025-04-07 08:18:35.516 +01:00 [INF] Content root path: C:\Users\ramth\source\source\source\repos\SeamlessDigital.ToDoSystem
+2025-04-07 08:18:35.692 +01:00 [INF] HTTP GET /swagger/index.html responded 200 in 142.6772 ms
+2025-04-07 08:18:35.732 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44366/_framework/aspnetcore-browser-refresh.js - null null
+2025-04-07 08:18:35.733 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44366/_vs/browserLink - null null
+2025-04-07 08:18:35.734 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44366/swagger/index.html - 200 null text/html;charset=utf-8 390.8751ms
+2025-04-07 08:18:35.739 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44366/_framework/aspnetcore-browser-refresh.js - 200 13804 application/javascript; charset=utf-8 6.632ms
+2025-04-07 08:18:35.786 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44366/_vs/browserLink - 200 null text/javascript; charset=UTF-8 54.0107ms
+2025-04-07 08:18:35.838 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44366/swagger/v1/swagger.json - null null
+2025-04-07 08:18:35.852 +01:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 12.4439 ms
+2025-04-07 08:18:35.854 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44366/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 16.2807ms
+2025-04-07 08:19:03.386 +01:00 [INF] Request starting HTTP/2 POST https://localhost:44366/api/ToDo - application/json 182
+2025-04-07 08:19:03.451 +01:00 [INF] Executing endpoint 'SeamlessDigital.ToDoSystem.Controllers.ToDoController.AddToDoItem (SeamlessDigital.ToDoSystem)'
+2025-04-07 08:19:03.500 +01:00 [INF] Route matched with {action = "AddToDoItem", controller = "ToDo"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[SeamlessDigital.ToDoSystem.ViewModels.CreateTaskViewModel]] AddToDoItem(SeamlessDigital.ToDoSystem.ViewModels.CreateTaskViewModel) on controller SeamlessDigital.ToDoSystem.Controllers.ToDoController (SeamlessDigital.ToDoSystem).
+2025-04-07 08:19:04.052 +01:00 [INF] Executed DbCommand (4ms) [Parameters=[@__todoItem_CategoryId_Value_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "c"."Id", "c"."ParentCategoryId", "c"."Title", "c0"."Id", "c0"."ParentCategoryId", "c0"."Title"
+FROM "categories" AS "c"
+LEFT JOIN "categories" AS "c0" ON "c"."ParentCategoryId" = "c0"."Id"
+WHERE "c"."Id" = @__todoItem_CategoryId_Value_0
+LIMIT 1
+2025-04-07 08:19:04.240 +01:00 [ERR] ArgumentException occurred while adding new To-Do item.
+System.ArgumentNullException: Value cannot be null. (Parameter 'Invalid Category ID.')
+   at SeamlessDigital.ToDoSystem.Services.Implementations.TodoService.AddTaskAsync(CreateTaskViewModel todoItem) in C:\Users\ramth\source\source\source\repos\SeamlessDigital.ToDoSystem\Services\Implementations\TodoService.cs:line 88
+   at SeamlessDigital.ToDoSystem.Controllers.ToDoController.AddToDoItem(CreateTaskViewModel todoItem) in C:\Users\ramth\source\source\source\repos\SeamlessDigital.ToDoSystem\Controllers\TodoController.cs:line 122
+2025-04-07 08:19:04.338 +01:00 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2025-04-07 08:19:04.350 +01:00 [INF] Executed action SeamlessDigital.ToDoSystem.Controllers.ToDoController.AddToDoItem (SeamlessDigital.ToDoSystem) in 841.4712ms
+2025-04-07 08:19:04.353 +01:00 [INF] Executed endpoint 'SeamlessDigital.ToDoSystem.Controllers.ToDoController.AddToDoItem (SeamlessDigital.ToDoSystem)'
+2025-04-07 08:19:04.353 +01:00 [ERR] HTTP POST /api/ToDo responded 500 in 949.2791 ms
+2025-04-07 08:19:04.371 +01:00 [INF] Request finished HTTP/2 POST https://localhost:44366/api/ToDo - 500 null text/plain; charset=utf-8 985.8253ms
+2025-04-07 08:19:27.185 +01:00 [INF] Request starting HTTP/2 POST https://localhost:44366/api/ToDo - application/json 182
+2025-04-07 08:19:27.188 +01:00 [INF] Executing endpoint 'SeamlessDigital.ToDoSystem.Controllers.ToDoController.AddToDoItem (SeamlessDigital.ToDoSystem)'
+2025-04-07 08:19:27.189 +01:00 [INF] Route matched with {action = "AddToDoItem", controller = "ToDo"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[SeamlessDigital.ToDoSystem.ViewModels.CreateTaskViewModel]] AddToDoItem(SeamlessDigital.ToDoSystem.ViewModels.CreateTaskViewModel) on controller SeamlessDigital.ToDoSystem.Controllers.ToDoController (SeamlessDigital.ToDoSystem).
+2025-04-07 08:19:27.234 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@__todoItem_CategoryId_Value_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "c"."Id", "c"."ParentCategoryId", "c"."Title", "c0"."Id", "c0"."ParentCategoryId", "c0"."Title"
+FROM "categories" AS "c"
+LEFT JOIN "categories" AS "c0" ON "c"."ParentCategoryId" = "c0"."Id"
+WHERE "c"."Id" = @__todoItem_CategoryId_Value_0
+LIMIT 1
+2025-04-07 08:19:27.662 +01:00 [INF] Executed DbCommand (5ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Boolean), @p2='?' (DbType = DateTime), @p3='?' (DbType = Double), @p4='?' (DbType = Double), @p5='?' (DbType = Int32), @p6='?' (Size = 6), @p7='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "todotasks" ("CategoryId", "Completed", "DueDate", "Latitude", "Longitude", "Priority", "Title", "UserId")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7)
+RETURNING "Id";
+2025-04-07 08:19:27.738 +01:00 [INF] Successfully added new To-Do item with ID 34.
+2025-04-07 08:19:27.742 +01:00 [INF] Executing CreatedAtActionResult, writing value of type 'SeamlessDigital.ToDoSystem.ViewModels.CreateTaskViewModel'.
+2025-04-07 08:19:27.786 +01:00 [INF] Executed action SeamlessDigital.ToDoSystem.Controllers.ToDoController.AddToDoItem (SeamlessDigital.ToDoSystem) in 595.6378ms
+2025-04-07 08:19:27.786 +01:00 [INF] Executed endpoint 'SeamlessDigital.ToDoSystem.Controllers.ToDoController.AddToDoItem (SeamlessDigital.ToDoSystem)'
+2025-04-07 08:19:27.787 +01:00 [INF] HTTP POST /api/ToDo responded 201 in 599.1042 ms
+2025-04-07 08:19:27.791 +01:00 [INF] Request finished HTTP/2 POST https://localhost:44366/api/ToDo - 201 null application/json; charset=utf-8 603.9452ms
+2025-04-07 08:24:22.983 +01:00 [INF] Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long.
+2025-04-07 08:24:23.113 +01:00 [INF] Executed DbCommand (45ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsLock' AND "type" = 'table';
+2025-04-07 08:24:23.128 +01:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT OR IGNORE INTO "__EFMigrationsLock"("Id", "Timestamp") VALUES(1, '2025-04-07 07:24:23.1211615+00:00');
+SELECT changes();
+2025-04-07 08:24:23.205 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE IF NOT EXISTS "__EFMigrationsHistory" (
+    "MigrationId" TEXT NOT NULL CONSTRAINT "PK___EFMigrationsHistory" PRIMARY KEY,
+    "ProductVersion" TEXT NOT NULL
+);
+2025-04-07 08:24:23.213 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+2025-04-07 08:24:23.217 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2025-04-07 08:24:23.226 +01:00 [INF] No migrations were applied. The database is already up to date.
+2025-04-07 08:24:23.231 +01:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DELETE FROM "__EFMigrationsLock";
+2025-04-07 08:24:23.537 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "todotasks" AS "t")
+2025-04-07 08:24:23.882 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44366/swagger/index.html - null null
+2025-04-07 08:24:24.010 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-07 08:24:24.011 +01:00 [INF] Hosting environment: Development
+2025-04-07 08:24:24.011 +01:00 [INF] Content root path: C:\Users\ramth\source\source\source\repos\SeamlessDigital.ToDoSystem
+2025-04-07 08:24:24.145 +01:00 [INF] HTTP GET /swagger/index.html responded 200 in 122.0557 ms
+2025-04-07 08:24:24.180 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44366/_framework/aspnetcore-browser-refresh.js - null null
+2025-04-07 08:24:24.189 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44366/swagger/index.html - 200 null text/html;charset=utf-8 318.7312ms
+2025-04-07 08:24:24.189 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44366/_vs/browserLink - null null
+2025-04-07 08:24:24.193 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44366/_framework/aspnetcore-browser-refresh.js - 200 13804 application/javascript; charset=utf-8 16.1418ms
+2025-04-07 08:24:24.267 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44366/_vs/browserLink - 200 null text/javascript; charset=UTF-8 77.9572ms
+2025-04-07 08:24:24.314 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44366/swagger/v1/swagger.json - null null
+2025-04-07 08:24:24.326 +01:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 11.4382 ms
+2025-04-07 08:24:24.328 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44366/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 14.4288ms
+2025-04-07 08:24:35.030 +01:00 [INF] Request starting HTTP/2 POST https://localhost:44366/api/ToDo - application/json 182
+2025-04-07 08:24:35.051 +01:00 [INF] Executing endpoint 'SeamlessDigital.ToDoSystem.Controllers.ToDoController.AddToDoItem (SeamlessDigital.ToDoSystem)'
+2025-04-07 08:24:35.106 +01:00 [INF] Route matched with {action = "AddToDoItem", controller = "ToDo"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[SeamlessDigital.ToDoSystem.ViewModels.CreateTaskViewModel]] AddToDoItem(SeamlessDigital.ToDoSystem.ViewModels.CreateTaskViewModel) on controller SeamlessDigital.ToDoSystem.Controllers.ToDoController (SeamlessDigital.ToDoSystem).
+2025-04-07 08:24:35.662 +01:00 [INF] Executed DbCommand (4ms) [Parameters=[@__todoItem_CategoryId_Value_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "c"."Id", "c"."ParentCategoryId", "c"."Title", "c0"."Id", "c0"."ParentCategoryId", "c0"."Title"
+FROM "categories" AS "c"
+LEFT JOIN "categories" AS "c0" ON "c"."ParentCategoryId" = "c0"."Id"
+WHERE "c"."Id" = @__todoItem_CategoryId_Value_0
+LIMIT 1
+2025-04-07 08:24:35.869 +01:00 [ERR] ArgumentException occurred while adding new To-Do item.
+System.ArgumentNullException: Value cannot be null. (Parameter 'Invalid Category ID.')
+   at SeamlessDigital.ToDoSystem.Services.Implementations.TodoService.AddTaskAsync(CreateTaskViewModel todoItem) in C:\Users\ramth\source\source\source\repos\SeamlessDigital.ToDoSystem\Services\Implementations\TodoService.cs:line 88
+   at SeamlessDigital.ToDoSystem.Controllers.ToDoController.AddToDoItem(CreateTaskViewModel todoItem) in C:\Users\ramth\source\source\source\repos\SeamlessDigital.ToDoSystem\Controllers\TodoController.cs:line 122
+2025-04-07 08:24:35.959 +01:00 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2025-04-07 08:24:35.972 +01:00 [INF] Executed action SeamlessDigital.ToDoSystem.Controllers.ToDoController.AddToDoItem (SeamlessDigital.ToDoSystem) in 858.6353ms
+2025-04-07 08:24:35.972 +01:00 [INF] Executed endpoint 'SeamlessDigital.ToDoSystem.Controllers.ToDoController.AddToDoItem (SeamlessDigital.ToDoSystem)'
+2025-04-07 08:24:35.973 +01:00 [ERR] HTTP POST /api/ToDo responded 500 in 935.9540 ms
+2025-04-07 08:24:35.977 +01:00 [INF] Request finished HTTP/2 POST https://localhost:44366/api/ToDo - 500 null text/plain; charset=utf-8 948.2822ms
+2025-04-07 08:24:44.987 +01:00 [INF] Request starting HTTP/2 POST https://localhost:44366/api/ToDo - application/json 182
+2025-04-07 08:24:45.006 +01:00 [INF] Executing endpoint 'SeamlessDigital.ToDoSystem.Controllers.ToDoController.AddToDoItem (SeamlessDigital.ToDoSystem)'
+2025-04-07 08:24:45.008 +01:00 [INF] Route matched with {action = "AddToDoItem", controller = "ToDo"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[SeamlessDigital.ToDoSystem.ViewModels.CreateTaskViewModel]] AddToDoItem(SeamlessDigital.ToDoSystem.ViewModels.CreateTaskViewModel) on controller SeamlessDigital.ToDoSystem.Controllers.ToDoController (SeamlessDigital.ToDoSystem).
+2025-04-07 08:24:45.029 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@__todoItem_CategoryId_Value_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "c"."Id", "c"."ParentCategoryId", "c"."Title", "c0"."Id", "c0"."ParentCategoryId", "c0"."Title"
+FROM "categories" AS "c"
+LEFT JOIN "categories" AS "c0" ON "c"."ParentCategoryId" = "c0"."Id"
+WHERE "c"."Id" = @__todoItem_CategoryId_Value_0
+LIMIT 1
+2025-04-07 08:24:45.579 +01:00 [INF] Executed DbCommand (4ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Boolean), @p2='?' (DbType = DateTime), @p3='?' (DbType = Double), @p4='?' (DbType = Double), @p5='?' (DbType = Int32), @p6='?' (Size = 6), @p7='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "todotasks" ("CategoryId", "Completed", "DueDate", "Latitude", "Longitude", "Priority", "Title", "UserId")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7)
+RETURNING "Id";
+2025-04-07 08:24:45.652 +01:00 [INF] Successfully added new To-Do item with ID 35.
+2025-04-07 08:24:45.662 +01:00 [INF] Executing CreatedAtActionResult, writing value of type 'SeamlessDigital.ToDoSystem.ViewModels.CreateTaskViewModel'.
+2025-04-07 08:24:45.740 +01:00 [INF] Executed action SeamlessDigital.ToDoSystem.Controllers.ToDoController.AddToDoItem (SeamlessDigital.ToDoSystem) in 731.1796ms
+2025-04-07 08:24:45.740 +01:00 [INF] Executed endpoint 'SeamlessDigital.ToDoSystem.Controllers.ToDoController.AddToDoItem (SeamlessDigital.ToDoSystem)'
+2025-04-07 08:24:45.740 +01:00 [INF] HTTP POST /api/ToDo responded 201 in 734.9592 ms
+2025-04-07 08:24:45.743 +01:00 [INF] Request finished HTTP/2 POST https://localhost:44366/api/ToDo - 201 null application/json; charset=utf-8 757.7236ms
+2025-04-07 08:26:42.085 +01:00 [INF] Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long.
+2025-04-07 08:26:42.191 +01:00 [INF] Executed DbCommand (33ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsLock' AND "type" = 'table';
+2025-04-07 08:26:42.204 +01:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT OR IGNORE INTO "__EFMigrationsLock"("Id", "Timestamp") VALUES(1, '2025-04-07 07:26:42.1976612+00:00');
+SELECT changes();
+2025-04-07 08:26:42.281 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE IF NOT EXISTS "__EFMigrationsHistory" (
+    "MigrationId" TEXT NOT NULL CONSTRAINT "PK___EFMigrationsHistory" PRIMARY KEY,
+    "ProductVersion" TEXT NOT NULL
+);
+2025-04-07 08:26:42.294 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+2025-04-07 08:26:42.297 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2025-04-07 08:26:42.308 +01:00 [INF] No migrations were applied. The database is already up to date.
+2025-04-07 08:26:42.311 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DELETE FROM "__EFMigrationsLock";
+2025-04-07 08:26:42.644 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "todotasks" AS "t")
+2025-04-07 08:26:43.036 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44366/swagger/index.html - null null
+2025-04-07 08:26:43.201 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-07 08:26:43.202 +01:00 [INF] Hosting environment: Development
+2025-04-07 08:26:43.202 +01:00 [INF] Content root path: C:\Users\ramth\source\source\source\repos\SeamlessDigital.ToDoSystem
+2025-04-07 08:26:43.362 +01:00 [INF] HTTP GET /swagger/index.html responded 200 in 144.8327 ms
+2025-04-07 08:26:43.376 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44366/_framework/aspnetcore-browser-refresh.js - null null
+2025-04-07 08:26:43.376 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44366/swagger/index.html - 200 null text/html;charset=utf-8 357.3302ms
+2025-04-07 08:26:43.391 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44366/_framework/aspnetcore-browser-refresh.js - 200 13804 application/javascript; charset=utf-8 5.3352ms
+2025-04-07 08:26:43.395 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44366/_vs/browserLink - null null
+2025-04-07 08:26:43.454 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44366/_vs/browserLink - 200 null text/javascript; charset=UTF-8 58.8994ms
+2025-04-07 08:26:43.505 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44366/swagger/v1/swagger.json - null null
+2025-04-07 08:26:43.524 +01:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 16.5189 ms
+2025-04-07 08:26:43.526 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44366/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 20.5818ms
+2025-04-07 08:26:53.502 +01:00 [INF] Request starting HTTP/2 POST https://localhost:44366/api/ToDo - application/json 182
+2025-04-07 08:26:53.540 +01:00 [INF] Executing endpoint 'SeamlessDigital.ToDoSystem.Controllers.ToDoController.AddToDoItem (SeamlessDigital.ToDoSystem)'
+2025-04-07 08:26:53.593 +01:00 [INF] Route matched with {action = "AddToDoItem", controller = "ToDo"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[SeamlessDigital.ToDoSystem.ViewModels.CreateTaskViewModel]] AddToDoItem(SeamlessDigital.ToDoSystem.ViewModels.CreateTaskViewModel) on controller SeamlessDigital.ToDoSystem.Controllers.ToDoController (SeamlessDigital.ToDoSystem).
+2025-04-07 08:26:54.097 +01:00 [INF] Executed DbCommand (5ms) [Parameters=[@__todoItem_CategoryId_Value_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "c"."Id", "c"."ParentCategoryId", "c"."Title", "c0"."Id", "c0"."ParentCategoryId", "c0"."Title"
+FROM "categories" AS "c"
+LEFT JOIN "categories" AS "c0" ON "c"."ParentCategoryId" = "c0"."Id"
+WHERE "c"."Id" = @__todoItem_CategoryId_Value_0
+LIMIT 1
+2025-04-07 08:26:54.303 +01:00 [ERR] ArgumentException occurred while adding new To-Do item.
+System.ArgumentNullException: Value cannot be null. (Parameter 'Invalid Category ID.')
+   at SeamlessDigital.ToDoSystem.Services.Implementations.TodoService.AddTaskAsync(CreateTaskViewModel todoItem) in C:\Users\ramth\source\source\source\repos\SeamlessDigital.ToDoSystem\Services\Implementations\TodoService.cs:line 88
+   at SeamlessDigital.ToDoSystem.Controllers.ToDoController.AddToDoItem(CreateTaskViewModel todoItem) in C:\Users\ramth\source\source\source\repos\SeamlessDigital.ToDoSystem\Controllers\TodoController.cs:line 126
+2025-04-07 08:26:54.384 +01:00 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2025-04-07 08:26:54.393 +01:00 [INF] Executed action SeamlessDigital.ToDoSystem.Controllers.ToDoController.AddToDoItem (SeamlessDigital.ToDoSystem) in 793.4135ms
+2025-04-07 08:26:54.394 +01:00 [INF] Executed endpoint 'SeamlessDigital.ToDoSystem.Controllers.ToDoController.AddToDoItem (SeamlessDigital.ToDoSystem)'
+2025-04-07 08:26:54.395 +01:00 [ERR] HTTP POST /api/ToDo responded 500 in 881.2511 ms
+2025-04-07 08:26:54.417 +01:00 [INF] Request finished HTTP/2 POST https://localhost:44366/api/ToDo - 500 null text/plain; charset=utf-8 915.8231ms
+2025-04-07 08:27:03.728 +01:00 [INF] Request starting HTTP/2 POST https://localhost:44366/api/ToDo - application/json 182
+2025-04-07 08:27:03.729 +01:00 [INF] Executing endpoint 'SeamlessDigital.ToDoSystem.Controllers.ToDoController.AddToDoItem (SeamlessDigital.ToDoSystem)'
+2025-04-07 08:27:03.735 +01:00 [INF] Route matched with {action = "AddToDoItem", controller = "ToDo"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[SeamlessDigital.ToDoSystem.ViewModels.CreateTaskViewModel]] AddToDoItem(SeamlessDigital.ToDoSystem.ViewModels.CreateTaskViewModel) on controller SeamlessDigital.ToDoSystem.Controllers.ToDoController (SeamlessDigital.ToDoSystem).
+2025-04-07 08:27:03.785 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[@__todoItem_CategoryId_Value_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "c"."Id", "c"."ParentCategoryId", "c"."Title", "c0"."Id", "c0"."ParentCategoryId", "c0"."Title"
+FROM "categories" AS "c"
+LEFT JOIN "categories" AS "c0" ON "c"."ParentCategoryId" = "c0"."Id"
+WHERE "c"."Id" = @__todoItem_CategoryId_Value_0
+LIMIT 1
+2025-04-07 08:27:04.221 +01:00 [INF] Executed DbCommand (4ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Boolean), @p2='?' (DbType = DateTime), @p3='?' (DbType = Double), @p4='?' (DbType = Double), @p5='?' (DbType = Int32), @p6='?' (Size = 6), @p7='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "todotasks" ("CategoryId", "Completed", "DueDate", "Latitude", "Longitude", "Priority", "Title", "UserId")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7)
+RETURNING "Id";
+2025-04-07 08:27:04.271 +01:00 [INF] Successfully added new To-Do item with ID 36.
+2025-04-07 08:27:04.275 +01:00 [INF] Executing CreatedAtActionResult, writing value of type 'SeamlessDigital.ToDoSystem.ViewModels.CreateTaskViewModel'.
+2025-04-07 08:27:04.324 +01:00 [INF] Executed action SeamlessDigital.ToDoSystem.Controllers.ToDoController.AddToDoItem (SeamlessDigital.ToDoSystem) in 588.3169ms
+2025-04-07 08:27:04.325 +01:00 [INF] Executed endpoint 'SeamlessDigital.ToDoSystem.Controllers.ToDoController.AddToDoItem (SeamlessDigital.ToDoSystem)'
+2025-04-07 08:27:04.325 +01:00 [INF] HTTP POST /api/ToDo responded 201 in 595.9682 ms
+2025-04-07 08:27:04.329 +01:00 [INF] Request finished HTTP/2 POST https://localhost:44366/api/ToDo - 201 null application/json; charset=utf-8 598.9209ms
+2025-04-07 08:27:41.015 +01:00 [INF] Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long.
+2025-04-07 08:27:41.120 +01:00 [INF] Executed DbCommand (35ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsLock' AND "type" = 'table';
+2025-04-07 08:27:41.133 +01:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT OR IGNORE INTO "__EFMigrationsLock"("Id", "Timestamp") VALUES(1, '2025-04-07 07:27:41.1265883+00:00');
+SELECT changes();
+2025-04-07 08:27:41.207 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE IF NOT EXISTS "__EFMigrationsHistory" (
+    "MigrationId" TEXT NOT NULL CONSTRAINT "PK___EFMigrationsHistory" PRIMARY KEY,
+    "ProductVersion" TEXT NOT NULL
+);
+2025-04-07 08:27:41.215 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+2025-04-07 08:27:41.217 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2025-04-07 08:27:41.226 +01:00 [INF] No migrations were applied. The database is already up to date.
+2025-04-07 08:27:41.229 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DELETE FROM "__EFMigrationsLock";
+2025-04-07 08:27:41.609 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "todotasks" AS "t")
+2025-04-07 08:27:41.990 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44366/swagger/index.html - null null
+2025-04-07 08:27:42.170 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-07 08:27:42.171 +01:00 [INF] Hosting environment: Development
+2025-04-07 08:27:42.171 +01:00 [INF] Content root path: C:\Users\ramth\source\source\source\repos\SeamlessDigital.ToDoSystem
+2025-04-07 08:27:42.342 +01:00 [INF] HTTP GET /swagger/index.html responded 200 in 147.9799 ms
+2025-04-07 08:27:42.363 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44366/_framework/aspnetcore-browser-refresh.js - null null
+2025-04-07 08:27:42.367 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44366/swagger/index.html - 200 null text/html;charset=utf-8 387.13ms
+2025-04-07 08:27:42.374 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44366/_vs/browserLink - null null
+2025-04-07 08:27:42.375 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44366/_framework/aspnetcore-browser-refresh.js - 200 13804 application/javascript; charset=utf-8 6.1513ms
+2025-04-07 08:27:42.438 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44366/_vs/browserLink - 200 null text/javascript; charset=UTF-8 63.9463ms
+2025-04-07 08:27:42.494 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44366/swagger/v1/swagger.json - null null
+2025-04-07 08:27:42.509 +01:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 13.9326 ms
+2025-04-07 08:27:42.512 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44366/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 17.3143ms
+2025-04-07 08:27:53.842 +01:00 [INF] Request starting HTTP/2 POST https://localhost:44366/api/ToDo - application/json 182
+2025-04-07 08:27:53.868 +01:00 [INF] Executing endpoint 'SeamlessDigital.ToDoSystem.Controllers.ToDoController.AddToDoItem (SeamlessDigital.ToDoSystem)'
+2025-04-07 08:27:53.915 +01:00 [INF] Route matched with {action = "AddToDoItem", controller = "ToDo"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[SeamlessDigital.ToDoSystem.ViewModels.CreateTaskViewModel]] AddToDoItem(SeamlessDigital.ToDoSystem.ViewModels.CreateTaskViewModel) on controller SeamlessDigital.ToDoSystem.Controllers.ToDoController (SeamlessDigital.ToDoSystem).
+2025-04-07 08:31:31.904 +01:00 [INF] Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long.
+2025-04-07 08:31:32.022 +01:00 [INF] Executed DbCommand (42ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsLock' AND "type" = 'table';
+2025-04-07 08:31:32.036 +01:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT OR IGNORE INTO "__EFMigrationsLock"("Id", "Timestamp") VALUES(1, '2025-04-07 07:31:32.0304419+00:00');
+SELECT changes();
+2025-04-07 08:31:32.105 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE IF NOT EXISTS "__EFMigrationsHistory" (
+    "MigrationId" TEXT NOT NULL CONSTRAINT "PK___EFMigrationsHistory" PRIMARY KEY,
+    "ProductVersion" TEXT NOT NULL
+);
+2025-04-07 08:31:32.113 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+2025-04-07 08:31:32.116 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2025-04-07 08:31:32.125 +01:00 [INF] No migrations were applied. The database is already up to date.
+2025-04-07 08:31:32.129 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DELETE FROM "__EFMigrationsLock";
+2025-04-07 08:31:32.455 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "todotasks" AS "t")
+2025-04-07 08:31:32.786 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44366/swagger/index.html - null null
+2025-04-07 08:31:32.929 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-07 08:31:32.943 +01:00 [INF] Hosting environment: Development
+2025-04-07 08:31:32.943 +01:00 [INF] Content root path: C:\Users\ramth\source\source\source\repos\SeamlessDigital.ToDoSystem
+2025-04-07 08:31:33.128 +01:00 [INF] HTTP GET /swagger/index.html responded 200 in 154.3170 ms
+2025-04-07 08:31:33.150 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44366/swagger/index.html - 200 null text/html;charset=utf-8 375.6537ms
+2025-04-07 08:31:33.152 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44366/_framework/aspnetcore-browser-refresh.js - null null
+2025-04-07 08:31:33.173 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44366/_framework/aspnetcore-browser-refresh.js - 200 13804 application/javascript; charset=utf-8 8.3617ms
+2025-04-07 08:31:33.180 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44366/_vs/browserLink - null null
+2025-04-07 08:31:33.244 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44366/_vs/browserLink - 200 null text/javascript; charset=UTF-8 65.4335ms
+2025-04-07 08:31:33.292 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44366/swagger/v1/swagger.json - null null
+2025-04-07 08:31:33.305 +01:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 11.8230 ms
+2025-04-07 08:31:33.312 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44366/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 17.3243ms
+2025-04-07 08:31:40.155 +01:00 [INF] Request starting HTTP/2 POST https://localhost:44366/api/ToDo - application/json 182
+2025-04-07 08:31:40.178 +01:00 [INF] Executing endpoint 'SeamlessDigital.ToDoSystem.Controllers.ToDoController.AddToDoItem (SeamlessDigital.ToDoSystem)'
+2025-04-07 08:31:40.236 +01:00 [INF] Route matched with {action = "AddToDoItem", controller = "ToDo"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[SeamlessDigital.ToDoSystem.ViewModels.CreateTaskViewModel]] AddToDoItem(SeamlessDigital.ToDoSystem.ViewModels.CreateTaskViewModel) on controller SeamlessDigital.ToDoSystem.Controllers.ToDoController (SeamlessDigital.ToDoSystem).
+2025-04-07 08:31:40.553 +01:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2025-04-07 08:31:40.644 +01:00 [INF] Executed action SeamlessDigital.ToDoSystem.Controllers.ToDoController.AddToDoItem (SeamlessDigital.ToDoSystem) in 398.4545ms
+2025-04-07 08:31:40.645 +01:00 [INF] Executed endpoint 'SeamlessDigital.ToDoSystem.Controllers.ToDoController.AddToDoItem (SeamlessDigital.ToDoSystem)'
+2025-04-07 08:31:40.646 +01:00 [INF] HTTP POST /api/ToDo responded 400 in 482.2738 ms
+2025-04-07 08:31:40.651 +01:00 [INF] Request finished HTTP/2 POST https://localhost:44366/api/ToDo - 400 null application/problem+json; charset=utf-8 496.4425ms
+2025-04-07 08:32:13.744 +01:00 [INF] Request starting HTTP/2 POST https://localhost:44366/api/ToDo - application/json 182
+2025-04-07 08:32:13.748 +01:00 [INF] Executing endpoint 'SeamlessDigital.ToDoSystem.Controllers.ToDoController.AddToDoItem (SeamlessDigital.ToDoSystem)'
+2025-04-07 08:32:13.749 +01:00 [INF] Route matched with {action = "AddToDoItem", controller = "ToDo"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[SeamlessDigital.ToDoSystem.ViewModels.CreateTaskViewModel]] AddToDoItem(SeamlessDigital.ToDoSystem.ViewModels.CreateTaskViewModel) on controller SeamlessDigital.ToDoSystem.Controllers.ToDoController (SeamlessDigital.ToDoSystem).
+2025-04-07 08:32:13.762 +01:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2025-04-07 08:32:13.766 +01:00 [INF] Executed action SeamlessDigital.ToDoSystem.Controllers.ToDoController.AddToDoItem (SeamlessDigital.ToDoSystem) in 15.7542ms
+2025-04-07 08:32:13.766 +01:00 [INF] Executed endpoint 'SeamlessDigital.ToDoSystem.Controllers.ToDoController.AddToDoItem (SeamlessDigital.ToDoSystem)'
+2025-04-07 08:32:13.766 +01:00 [INF] HTTP POST /api/ToDo responded 400 in 19.0424 ms
+2025-04-07 08:32:13.768 +01:00 [INF] Request finished HTTP/2 POST https://localhost:44366/api/ToDo - 400 null application/problem+json; charset=utf-8 26.46ms
+2025-04-07 08:32:28.278 +01:00 [INF] Request starting HTTP/2 POST https://localhost:44366/api/ToDo - application/json 182
+2025-04-07 08:32:28.281 +01:00 [INF] Executing endpoint 'SeamlessDigital.ToDoSystem.Controllers.ToDoController.AddToDoItem (SeamlessDigital.ToDoSystem)'
+2025-04-07 08:32:28.283 +01:00 [INF] Route matched with {action = "AddToDoItem", controller = "ToDo"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[SeamlessDigital.ToDoSystem.ViewModels.CreateTaskViewModel]] AddToDoItem(SeamlessDigital.ToDoSystem.ViewModels.CreateTaskViewModel) on controller SeamlessDigital.ToDoSystem.Controllers.ToDoController (SeamlessDigital.ToDoSystem).
+2025-04-07 08:32:40.689 +01:00 [INF] Executed DbCommand (5ms) [Parameters=[@__todoItem_CategoryId_Value_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "c"."Id", "c"."ParentCategoryId", "c"."Title", "c0"."Id", "c0"."ParentCategoryId", "c0"."Title"
+FROM "categories" AS "c"
+LEFT JOIN "categories" AS "c0" ON "c"."ParentCategoryId" = "c0"."Id"
+WHERE "c"."Id" = @__todoItem_CategoryId_Value_0
+LIMIT 1
+2025-04-07 08:32:40.757 +01:00 [ERR] ArgumentException occurred while adding new To-Do item.
+System.ArgumentNullException: Value cannot be null. (Parameter 'Invalid Category ID.')
+   at SeamlessDigital.ToDoSystem.Services.Implementations.TodoService.AddTaskAsync(CreateTaskViewModel todoItem) in C:\Users\ramth\source\source\source\repos\SeamlessDigital.ToDoSystem\Services\Implementations\TodoService.cs:line 88
+   at SeamlessDigital.ToDoSystem.Controllers.ToDoController.AddToDoItem(CreateTaskViewModel todoItem) in C:\Users\ramth\source\source\source\repos\SeamlessDigital.ToDoSystem\Controllers\TodoController.cs:line 126
+2025-04-07 08:32:40.819 +01:00 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2025-04-07 08:32:40.821 +01:00 [INF] Executed action SeamlessDigital.ToDoSystem.Controllers.ToDoController.AddToDoItem (SeamlessDigital.ToDoSystem) in 12537.9021ms
+2025-04-07 08:32:40.821 +01:00 [INF] Executed endpoint 'SeamlessDigital.ToDoSystem.Controllers.ToDoController.AddToDoItem (SeamlessDigital.ToDoSystem)'
+2025-04-07 08:32:40.821 +01:00 [ERR] HTTP POST /api/ToDo responded 500 in 12540.6312 ms
+2025-04-07 08:32:40.828 +01:00 [INF] Request finished HTTP/2 POST https://localhost:44366/api/ToDo - 500 null text/plain; charset=utf-8 12552.6627ms

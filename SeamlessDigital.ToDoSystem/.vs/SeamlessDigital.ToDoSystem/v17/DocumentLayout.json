@@ -1,0 +1,229 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\ramth\\source\\source\\source\\repos\\SeamlessDigital.ToDoSystem\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{F2FC4003-9E6B-410E-B7D1-75E612B20CEE}|SeamlessDigital.ToDoSystem.csproj|c:\\users\\ramth\\source\\source\\source\\repos\\seamlessdigital.todosystem\\controllers\\todocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F2FC4003-9E6B-410E-B7D1-75E612B20CEE}|SeamlessDigital.ToDoSystem.csproj|solutionrelative:controllers\\todocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F2FC4003-9E6B-410E-B7D1-75E612B20CEE}|SeamlessDigital.ToDoSystem.csproj|c:\\users\\ramth\\source\\source\\source\\repos\\seamlessdigital.todosystem\\services\\implementations\\weatherapiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F2FC4003-9E6B-410E-B7D1-75E612B20CEE}|SeamlessDigital.ToDoSystem.csproj|solutionrelative:services\\implementations\\weatherapiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F2FC4003-9E6B-410E-B7D1-75E612B20CEE}|SeamlessDigital.ToDoSystem.csproj|c:\\users\\ramth\\source\\source\\source\\repos\\seamlessdigital.todosystem\\models\\weather.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F2FC4003-9E6B-410E-B7D1-75E612B20CEE}|SeamlessDigital.ToDoSystem.csproj|solutionrelative:models\\weather.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F2FC4003-9E6B-410E-B7D1-75E612B20CEE}|SeamlessDigital.ToDoSystem.csproj|c:\\users\\ramth\\source\\source\\source\\repos\\seamlessdigital.todosystem\\models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F2FC4003-9E6B-410E-B7D1-75E612B20CEE}|SeamlessDigital.ToDoSystem.csproj|solutionrelative:models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F2FC4003-9E6B-410E-B7D1-75E612B20CEE}|SeamlessDigital.ToDoSystem.csproj|c:\\users\\ramth\\source\\source\\source\\repos\\seamlessdigital.todosystem\\services\\implementations\\dummyjsonapiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F2FC4003-9E6B-410E-B7D1-75E612B20CEE}|SeamlessDigital.ToDoSystem.csproj|solutionrelative:services\\implementations\\dummyjsonapiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F2FC4003-9E6B-410E-B7D1-75E612B20CEE}|SeamlessDigital.ToDoSystem.csproj|c:\\users\\ramth\\source\\source\\source\\repos\\seamlessdigital.todosystem\\services\\contracts\\idummyjsonapirepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F2FC4003-9E6B-410E-B7D1-75E612B20CEE}|SeamlessDigital.ToDoSystem.csproj|solutionrelative:services\\contracts\\idummyjsonapirepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F2FC4003-9E6B-410E-B7D1-75E612B20CEE}|SeamlessDigital.ToDoSystem.csproj|c:\\users\\ramth\\source\\source\\source\\repos\\seamlessdigital.todosystem\\models\\tododto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F2FC4003-9E6B-410E-B7D1-75E612B20CEE}|SeamlessDigital.ToDoSystem.csproj|solutionrelative:models\\tododto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F2FC4003-9E6B-410E-B7D1-75E612B20CEE}|SeamlessDigital.ToDoSystem.csproj|c:\\users\\ramth\\source\\source\\source\\repos\\seamlessdigital.todosystem\\services\\contracts\\itodorepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F2FC4003-9E6B-410E-B7D1-75E612B20CEE}|SeamlessDigital.ToDoSystem.csproj|solutionrelative:services\\contracts\\itodorepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F2FC4003-9E6B-410E-B7D1-75E612B20CEE}|SeamlessDigital.ToDoSystem.csproj|c:\\users\\ramth\\source\\source\\source\\repos\\seamlessdigital.todosystem\\data\\todocontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F2FC4003-9E6B-410E-B7D1-75E612B20CEE}|SeamlessDigital.ToDoSystem.csproj|solutionrelative:data\\todocontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F2FC4003-9E6B-410E-B7D1-75E612B20CEE}|SeamlessDigital.ToDoSystem.csproj|c:\\users\\ramth\\source\\source\\source\\repos\\seamlessdigital.todosystem\\models\\todotask.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F2FC4003-9E6B-410E-B7D1-75E612B20CEE}|SeamlessDigital.ToDoSystem.csproj|solutionrelative:models\\todotask.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F2FC4003-9E6B-410E-B7D1-75E612B20CEE}|SeamlessDigital.ToDoSystem.csproj|c:\\users\\ramth\\source\\source\\source\\repos\\seamlessdigital.todosystem\\validators\\todovalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F2FC4003-9E6B-410E-B7D1-75E612B20CEE}|SeamlessDigital.ToDoSystem.csproj|solutionrelative:validators\\todovalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F2FC4003-9E6B-410E-B7D1-75E612B20CEE}|SeamlessDigital.ToDoSystem.csproj|c:\\users\\ramth\\source\\source\\source\\repos\\seamlessdigital.todosystem\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F2FC4003-9E6B-410E-B7D1-75E612B20CEE}|SeamlessDigital.ToDoSystem.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F2FC4003-9E6B-410E-B7D1-75E612B20CEE}|SeamlessDigital.ToDoSystem.csproj|c:\\users\\ramth\\source\\source\\source\\repos\\seamlessdigital.todosystem\\services\\implementations\\todoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F2FC4003-9E6B-410E-B7D1-75E612B20CEE}|SeamlessDigital.ToDoSystem.csproj|solutionrelative:services\\implementations\\todoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 12,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "WeatherAPIService.cs",
+              "DocumentMoniker": "C:\\Users\\ramth\\source\\source\\source\\repos\\SeamlessDigital.ToDoSystem\\Services\\Implementations\\WeatherAPIService.cs",
+              "RelativeDocumentMoniker": "Services\\Implementations\\WeatherAPIService.cs",
+              "ToolTip": "C:\\Users\\ramth\\source\\source\\source\\repos\\SeamlessDigital.ToDoSystem\\Services\\Implementations\\WeatherAPIService.cs",
+              "RelativeToolTip": "Services\\Implementations\\WeatherAPIService.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAlwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-07T20:08:47.474Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Weather.cs",
+              "DocumentMoniker": "C:\\Users\\ramth\\source\\source\\source\\repos\\SeamlessDigital.ToDoSystem\\Models\\Weather.cs",
+              "RelativeDocumentMoniker": "Models\\Weather.cs",
+              "ToolTip": "C:\\Users\\ramth\\source\\source\\source\\repos\\SeamlessDigital.ToDoSystem\\Models\\Weather.cs",
+              "RelativeToolTip": "Models\\Weather.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAIA3wAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-07T20:08:30.268Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "DummyJsonAPIService.cs",
+              "DocumentMoniker": "C:\\Users\\ramth\\source\\source\\source\\repos\\SeamlessDigital.ToDoSystem\\Services\\Implementations\\DummyJsonAPIService.cs",
+              "RelativeDocumentMoniker": "Services\\Implementations\\DummyJsonAPIService.cs",
+              "ToolTip": "C:\\Users\\ramth\\source\\source\\source\\repos\\SeamlessDigital.ToDoSystem\\Services\\Implementations\\DummyJsonAPIService.cs",
+              "RelativeToolTip": "Services\\Implementations\\DummyJsonAPIService.cs",
+              "ViewState": "AgIAACEAAAAAAAAAAAAtwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-07T17:46:34.324Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "IDummyJsonAPIRepo.cs",
+              "DocumentMoniker": "C:\\Users\\ramth\\source\\source\\source\\repos\\SeamlessDigital.ToDoSystem\\Services\\Contracts\\IDummyJsonAPIRepo.cs",
+              "RelativeDocumentMoniker": "Services\\Contracts\\IDummyJsonAPIRepo.cs",
+              "ToolTip": "C:\\Users\\ramth\\source\\source\\source\\repos\\SeamlessDigital.ToDoSystem\\Services\\Contracts\\IDummyJsonAPIRepo.cs",
+              "RelativeToolTip": "Services\\Contracts\\IDummyJsonAPIRepo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-07T17:46:29.788Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Tododto.cs",
+              "DocumentMoniker": "C:\\Users\\ramth\\source\\source\\source\\repos\\SeamlessDigital.ToDoSystem\\Models\\Tododto.cs",
+              "RelativeDocumentMoniker": "Models\\Tododto.cs",
+              "ToolTip": "C:\\Users\\ramth\\source\\source\\source\\repos\\SeamlessDigital.ToDoSystem\\Models\\Tododto.cs",
+              "RelativeToolTip": "Models\\Tododto.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAwwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-07T17:09:30.902Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ITodoRepo.cs",
+              "DocumentMoniker": "C:\\Users\\ramth\\source\\source\\source\\repos\\SeamlessDigital.ToDoSystem\\Services\\Contracts\\ITodoRepo.cs",
+              "RelativeDocumentMoniker": "Services\\Contracts\\ITodoRepo.cs",
+              "ToolTip": "C:\\Users\\ramth\\source\\source\\source\\repos\\SeamlessDigital.ToDoSystem\\Services\\Contracts\\ITodoRepo.cs",
+              "RelativeToolTip": "Services\\Contracts\\ITodoRepo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-07T17:09:26.121Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "TodoContext.cs",
+              "DocumentMoniker": "C:\\Users\\ramth\\source\\source\\source\\repos\\SeamlessDigital.ToDoSystem\\Data\\TodoContext.cs",
+              "RelativeDocumentMoniker": "Data\\TodoContext.cs",
+              "ToolTip": "C:\\Users\\ramth\\source\\source\\source\\repos\\SeamlessDigital.ToDoSystem\\Data\\TodoContext.cs",
+              "RelativeToolTip": "Data\\TodoContext.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABsAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-07T15:26:59.633Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Todotask.cs",
+              "DocumentMoniker": "C:\\Users\\ramth\\source\\source\\source\\repos\\SeamlessDigital.ToDoSystem\\Models\\Todotask.cs",
+              "RelativeDocumentMoniker": "Models\\Todotask.cs",
+              "ToolTip": "C:\\Users\\ramth\\source\\source\\source\\repos\\SeamlessDigital.ToDoSystem\\Models\\Todotask.cs",
+              "RelativeToolTip": "Models\\Todotask.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAYwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-07T15:21:39.234Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Category.cs",
+              "DocumentMoniker": "C:\\Users\\ramth\\source\\source\\source\\repos\\SeamlessDigital.ToDoSystem\\Models\\Category.cs",
+              "RelativeDocumentMoniker": "Models\\Category.cs",
+              "ToolTip": "C:\\Users\\ramth\\source\\source\\source\\repos\\SeamlessDigital.ToDoSystem\\Models\\Category.cs",
+              "RelativeToolTip": "Models\\Category.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-07T15:21:35.023Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\ramth\\source\\source\\source\\repos\\SeamlessDigital.ToDoSystem\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\ramth\\source\\source\\source\\repos\\SeamlessDigital.ToDoSystem\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAACUAAAAAAAAAAAAQwDIAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-07T07:23:54.807Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "TodoValidator.cs",
+              "DocumentMoniker": "C:\\Users\\ramth\\source\\source\\source\\repos\\SeamlessDigital.ToDoSystem\\Validators\\TodoValidator.cs",
+              "RelativeDocumentMoniker": "Validators\\TodoValidator.cs",
+              "ToolTip": "C:\\Users\\ramth\\source\\source\\source\\repos\\SeamlessDigital.ToDoSystem\\Validators\\TodoValidator.cs",
+              "RelativeToolTip": "Validators\\TodoValidator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-06T19:53:11.07Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "TodoService.cs",
+              "DocumentMoniker": "C:\\Users\\ramth\\source\\source\\source\\repos\\SeamlessDigital.ToDoSystem\\Services\\Implementations\\TodoService.cs",
+              "RelativeDocumentMoniker": "Services\\Implementations\\TodoService.cs",
+              "ToolTip": "C:\\Users\\ramth\\source\\source\\source\\repos\\SeamlessDigital.ToDoSystem\\Services\\Implementations\\TodoService.cs",
+              "RelativeToolTip": "Services\\Implementations\\TodoService.cs",
+              "ViewState": "AgIAAEQAAAAAAAAAAAAMwEsAAABPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-05T15:09:55.041Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "TodoController.cs",
+              "DocumentMoniker": "C:\\Users\\ramth\\source\\source\\source\\repos\\SeamlessDigital.ToDoSystem\\Controllers\\TodoController.cs",
+              "RelativeDocumentMoniker": "Controllers\\TodoController.cs",
+              "ToolTip": "C:\\Users\\ramth\\source\\source\\source\\repos\\SeamlessDigital.ToDoSystem\\Controllers\\TodoController.cs",
+              "RelativeToolTip": "Controllers\\TodoController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-05T11:57:57.855Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
